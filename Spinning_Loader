@@ -1,0 +1,71 @@
+
+
+<style>
+
+body {
+  vertical-align: center;
+}
+
+div#outsideLoader {
+  width: 246px;
+  height: 246px;
+  border-radius: 50%;
+  border-top: 23px solid green;
+  border-right: 23px solid black;
+  border-bottom: 23px solid red;
+  border-left: 23px solid purple;
+/*   animation: reverseSpin 1s linear 0s infinite reverse; */
+  
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  
+  display: table;
+}
+
+div#insideLoader {
+  background-color: blue;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 23px solid red;
+  border-right: 23px solid purple;
+  border-bottom: 23px solid green;
+  border-left: 23px solid black;
+/*   animation: spin 1s linear 0s infinite normal; */
+  
+  animation-name: spin;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  
+  
+  display: table-cell;
+}
+
+@keyframes reverseSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+
+<div id="outsideLoader">
+  <div id="insideLoader">
+    
+  </div>
+</div>
